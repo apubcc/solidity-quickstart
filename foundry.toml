@@ -2,7 +2,7 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-solc = "0.8.23"
+solc = "0.8.24"
 solc-optimizer = true
 solc-optimizer-runs = 200
 viaIR = true
