@@ -31,14 +31,14 @@ contract DeployScript is Script {
         console2.log("New MultiSigWallet deployed at: ", newWalletAddress);
 
         // Interact with the new wallet
-        uint256 depositAmount = 1 ether;
+        uint256 depositAmount = 0.0001 ether;
         (bool success, ) = newWalletAddress.call{value: depositAmount}("");
         require(success, "Deposit failed");
         console2.log("Deposited ", depositAmount, " wei to the wallet");
 
         // Submit a transaction
         address recipient = address(0x3333333333333333333333333333333333333333);
-        uint256 value = 0.5 ether;
+        uint256 value = 0.0001 ether;
         bytes memory data = "";
         uint256 txIndex = newWallet.submitTransaction(recipient, value, data);
         console2.log("Submitted transaction with index: ", txIndex);
