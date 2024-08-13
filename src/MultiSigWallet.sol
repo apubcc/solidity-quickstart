@@ -79,8 +79,8 @@ contract MultiSigWallet {
         address _to,
         uint _value,
         bytes memory _data
-    ) public onlyOwner {
-        uint txIndex = transactions.length;
+    ) public onlyOwner returns (uint256) {
+        uint256 txIndex = transactions.length;
 
         transactions.push(
             Transaction({
@@ -93,6 +93,7 @@ contract MultiSigWallet {
         );
 
         emit SubmitTransaction(msg.sender, txIndex, _to, _value, _data);
+        return txIndex;
     }
 
     function confirmTransaction(
