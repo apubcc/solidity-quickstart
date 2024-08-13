@@ -120,3 +120,9 @@ This project includes a `.env.template` file that is crucial for managing enviro
    Replace {YOUR_API_KEY} in `SEPOLIA_RPC_URL` with your actual API key that you can get from Alchemy or Infura or any other RPC provider.
 
 4. **Set Etherscan API Keys**: These keys are used to verify your smart contracts on the respective blockchains. This template includes placeholders for Etherscan and ScrollScan API keys.
+
+Sample command to run the deploy script:
+
+```shell
+$ forge script script/MultiSig.s.sol --rpc-url $SCROLL_RPC_URL --etherscan-api-key scroll-sepolia --broadcast --verify -vvvv
+```

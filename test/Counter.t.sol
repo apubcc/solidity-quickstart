@@ -129,4 +129,11 @@ contract MultiSigWalletTest is Test {
         (bool success, ) = address(wallet).call{value: 1 ether}("");
         require(success, "Deposit failed");
     }
+
+    //Function to see if the function fails when a address that is not an owner tries to submit a transaction
+    function testNonOwnerSubmitTransaction() public {
+        vm.prank(address(0x3));
+        vm.expectRevert("not owner");
+        wallet.submitTransaction(address(0x4), 1 ether, "");
+    }
 }
