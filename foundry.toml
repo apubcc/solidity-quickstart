@@ -14,5 +14,5 @@ remappings = [
     ]
 
 [etherscan]
-48899 = { key = "F757C4CD44C537876C85C7831B7BBE6952", url = "https://explorer.zircuit.com/api/contractVerifyHardhat" }
-18 = { key = "verifyContract", url = "http://explorer-testnet.thundercore.co" }
+sepolia = { key = "CBTKPBT7ZHVZ3QEKT761YUTDAFYDUGEUTE", url = "https://api-sepolia.etherscan.io/api" }
+scroll-sepolia = { key = "YD4SSI87D8CE61VG5STXQAAWVR2WF8DYPY", url = "https://api-sepolia.scrollscan.com/api" }
